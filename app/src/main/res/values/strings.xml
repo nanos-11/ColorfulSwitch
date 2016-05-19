@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">日夜模式切换</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="change_theme">修改主题啦</string>
+    <string name="sec_act">button</string>
+    <string name="action_settings">Settings</string>
+</resources>

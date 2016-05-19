@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+
+    <!-- 日间主题 -->
+    <style name="DayTheme" parent="AppTheme">
+        <item name="root_view_bg">@drawable/bg_day</item>
+        <item name="btn_bg">@color/white_btn_color</item>
+        <item name="text_color">@color/black_tx_color</item>
+    </style>
+
+    <!-- 夜间主题 -->
+    <style name="NightTheme" parent="AppTheme">
+        <item name="root_view_bg">@drawable/bg_night</item>
+        <item name="btn_bg">@color/black_btn_color</item>
+        <item name="text_color">@color/white_tx_color</item>
+    </style>
+
+</resources>
