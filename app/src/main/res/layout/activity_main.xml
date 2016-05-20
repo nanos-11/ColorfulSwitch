@@ -15,30 +15,39 @@
         android:textColor="?attr/text_color"
         android:textSize="20sp"/>
 
-    <Button
-        android:id="@+id/change_btn"
+    <LinearLayout
+        android:id="@+id/ll_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textview"
-        android:layout_marginTop="20dp"
-        android:text="@string/change_theme"
-        android:textColor="?attr/text_color"/>
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/second_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/change_btn"
-        android:layout_marginTop="20dp"
-        android:background="@color/black_tx_color"
-        android:text="@string/sec_act"
-        android:textColor="@color/white_tx_color"/>
+
+        <Button
+            android:id="@+id/change_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:text="@string/change_theme"
+            android:textColor="?attr/text_color"/>
+
+        <Button
+            android:id="@+id/second_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/change_btn"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:text="@string/sec_act"
+            android:textColor="@color/black_tx_color"/>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/second_btn"
+        android:layout_below="@id/ll_btn"
         android:layout_marginTop="20dp"/>
 
 </RelativeLayout>

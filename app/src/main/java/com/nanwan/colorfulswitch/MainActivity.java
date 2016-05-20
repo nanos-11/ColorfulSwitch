@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void mockNews() {
         mNewsList = new ArrayList<String>();
         for (int i = 0; i < 20; i++) {
-            mNewsList.add("News Title - " + i);
+            mNewsList.add("列表item - " + i);
         }
     }
 
