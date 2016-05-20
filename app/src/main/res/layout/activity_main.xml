@@ -30,7 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/change_btn"
         android:layout_marginTop="20dp"
-        android:text="@string/sec_act"/>
+        android:background="@color/black_tx_color"
+        android:text="@string/sec_act"
+        android:textColor="@color/white_tx_color"/>
 
     <ListView
         android:id="@+id/listview"

@@ -1,5 +1,6 @@
 package com.nanwan.colorfulswitch;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -20,9 +21,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private ListView mListView;
     private Button mChange_btn;
+    private Button mSecond_btn;
     private Colorful mColorful;
-    private boolean isNight = false;
     private List<String> mNewsList;
+    private ThemeUtil mThemeUtil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         mListView = (ListView) findViewById(R.id.listview);
         mChange_btn = (Button) findViewById(R.id.change_btn);
+        mSecond_btn = (Button) findViewById(R.id.second_btn);
     }
 
     private void initListener() {
         mChange_btn.setOnClickListener(this);
+        mSecond_btn.setOnClickListener(this);
     }
 
     private void initData() {
@@ -57,17 +61,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .textColor(R.id.change_btn, R.attr.text_color) // 设置文本颜色
                 .setter(listViewSetter)           // 手动设置setter
                 .create();
+        mThemeUtil = new ThemeUtil(getApplicationContext(), mColorful);
     }
 
 
     // 切换主题
     private void changeThemeWithColorful() {
-        if (!isNight) {
-            mColorful.setTheme(R.style.DayTheme);
-        } else {
-            mColorful.setTheme(R.style.NightTheme);
-        }
-        isNight = !isNight;
+        mThemeUtil.setTheme();
+    }
+
+    private void themeWithColorful() {
+        mThemeUtil.setThemeOnCreate();
     }
 
     private void mockNews() {
@@ -79,7 +83,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        changeThemeWithColorful();
+        switch (v.getId()) {
+            case R.id.change_btn:
+                changeThemeWithColorful();
+                break;
+            case R.id.second_btn:
+                startActivity(new Intent(MainActivity.this, SetActivity.class));
+                break;
+            default:
+                break;
+        }
     }
 
     /**
@@ -127,6 +140,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public TextView newsTitleView;
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        themeWithColorful();
+    }
 
     @Override
     public void onBackPressed() {
