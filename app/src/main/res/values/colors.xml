@@ -6,11 +6,11 @@
 
 
     <!-- 日间模式 -->
-    <color name="white_btn_color">#302eb3</color>
+    <color name="blue_btn_color">#302eb3</color>
     <color name="black_tx_color">#333333</color>
 
     <!-- 夜间模式 -->
-    <color name="black_btn_color">#a5261a</color>
+    <color name="red_btn_color">#a5261a</color>
     <color name="white_tx_color">#f0f0f0</color>
 
 </resources>

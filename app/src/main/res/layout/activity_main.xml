@@ -6,14 +6,6 @@
                 android:background="?attr/root_view_bg"
                 tools:context="com.nanwan.colorfulswitch.MainActivity">
 
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/change_theme"
-        android:textColor="?attr/text_color"
-        android:textSize="20sp"/>
 
     <LinearLayout
         android:id="@+id/ll_btn"
@@ -21,12 +13,10 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-
         <Button
             android:id="@+id/change_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textview"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:text="@string/change_theme"
@@ -39,8 +29,9 @@
             android:layout_below="@id/change_btn"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
+            android:background="@color/red_btn_color"
             android:text="@string/sec_act"
-            android:textColor="@color/black_tx_color"/>
+            android:textColor="@color/white_tx_color"/>
     </LinearLayout>
 
     <ListView
